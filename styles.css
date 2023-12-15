@@ -1,0 +1,21 @@
+.bs {
+
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    margin: 2em;
+
+}
+
+.con {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+
+}
+
+.id {
+
+    color: aliceblue;
+    
+}
