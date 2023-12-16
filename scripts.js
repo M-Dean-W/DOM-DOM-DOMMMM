@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', function () {
     container.className = "con"
 
     let base = 0
-    
+
     button.addEventListener("click", function () {
 
         let sqDiv = document.createElement("div")
@@ -21,19 +21,64 @@ window.addEventListener('DOMContentLoaded', function () {
 
         sqDiv.className = "bs"
 
-        
+
         base++
 
         sqDiv.id = base
 
+        let idText = document.createTextNode(sqDiv.id)
+
+        sqDiv.addEventListener("mouseover", () => {
 
 
-        // sqDiv.addEventListener("hover", function(){}
+            sqDiv.appendChild(idText)
+
+            sqDiv.style.color = "white"
+            sqDiv.style.textAlign = "center"
 
 
+        })
 
+        sqDiv.addEventListener("mouseout", () => {
 
+            sqDiv.removeChild(idText)
+
+        })
+
+        sqDiv.addEventListener("click", () => {
+
+            sqDiv.style.backgroundColor = "#" + Math.floor(Math.random() * 255 ** 3).toString(16)
+
+        })
+
+        sqDiv.addEventListener("dblclick", () => {
+
+           
+            if (sqDiv.id % 2 == 0) {
+
+                if (sqDiv.nextSibling !== null) {
+
+                    sqDiv.nextSibling.remove()
+                    
+
+                } else { window.alert("no square so saddd") } 
+            }
+
+             else if (sqDiv.id % 2 == 1) {
+
+                    if (sqDiv.previousSibling !== null) {
+
+                        sqDiv.previousSibling.remove()
+                        
+
+                    } else { window.alert("no square so saddd") }
+                }
+            
+
+        })
 
     })
+
+
 
 })

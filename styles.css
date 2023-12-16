@@ -4,6 +4,7 @@
     width: 100px;
     background-color: black;
     margin: 2em;
+    line-height: 100px;
 
 }
 
@@ -12,10 +13,4 @@
     flex-direction: row;
     flex-flow: row wrap;
 
-}
-
-.id {
-
-    color: aliceblue;
-    
 }
